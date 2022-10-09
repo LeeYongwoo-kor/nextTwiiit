@@ -1,7 +1,10 @@
 import type { NextPage } from "next";
+import { Suspense } from "react";
 
 const Home: NextPage = () => {
-  return null;
+  <Suspense fallback={<span>Loading...</span>}></Suspense>;
+  // Not Login -> replace Login
+  return "Hi";
 };
 
 export default Home;

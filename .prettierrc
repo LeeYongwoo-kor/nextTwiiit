@@ -1,4 +1,5 @@
 {
+    "usePrettierrc": false,
     "singleQuote": false,
     "semi": true,
     "useTabs": false,

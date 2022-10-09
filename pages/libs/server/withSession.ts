@@ -13,6 +13,6 @@ const cookieOption = {
   password: process.env.COOKIE_PASSWORD!,
 };
 
-export function withApiSesuib(fn: any) {
+export function withApiSession(fn: any) {
   return withIronSessionApiRoute(fn, cookieOption);
 }

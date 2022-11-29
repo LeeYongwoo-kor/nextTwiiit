@@ -16,7 +16,11 @@ export default function useMutation<T>(url: string) {
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),
     })
-      .then((res) => res.json().catch(() => {}))
+      .then((res) =>
+        res.json().catch((e) => {
+          throw new Error(e);
+        })
+      )
       .then((data) => setState((prev) => ({ ...prev, data })))
       .catch((error) => setState((prev) => ({ ...prev, error })));
   };

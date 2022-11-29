@@ -6,6 +6,6 @@ export default function App({ Component, pageProps }: AppProps) {
   <SWRConfig
     value={{ fetcher: (url: string) => fetch(url).then((res) => res.json()) }}
   >
-    return <Component {...pageProps} />
+    <Component {...pageProps} />
   </SWRConfig>;
 }

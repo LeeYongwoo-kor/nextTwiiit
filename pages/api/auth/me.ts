@@ -30,11 +30,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       data: { email },
     });
 
-    await client.user.update({
-      where: { id: user?.id },
-      data: { name },
-    });
-
     res.json({ ok: true });
   }
 }
